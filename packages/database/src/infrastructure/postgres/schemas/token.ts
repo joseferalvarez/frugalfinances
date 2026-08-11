@@ -1,5 +1,4 @@
-import { uuid, varchar } from "drizzle-orm/cockroach-core";
-import { pgEnum, pgTable } from "drizzle-orm/pg-core";
+import { uuid, varchar, pgEnum, pgTable } from "drizzle-orm/pg-core";
 import { homesTable } from "./home";
 
 const categories = pgEnum("categories", ["telegram", "openai"]);

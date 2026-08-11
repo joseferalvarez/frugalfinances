@@ -1,5 +1,4 @@
-import { uuid, varchar } from "drizzle-orm/cockroach-core";
-import { pgTable, smallint } from "drizzle-orm/pg-core";
+import { uuid, varchar, pgTable, smallint } from "drizzle-orm/pg-core";
 import { invoiceTable } from "./invoice";
 
 export const invoiceProductTable = pgTable("invoice-products", {

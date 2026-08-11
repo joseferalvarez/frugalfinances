@@ -1,5 +1,4 @@
-import { date, smallint, uuid, varchar } from "drizzle-orm/cockroach-core";
-import { pgTable } from "drizzle-orm/pg-core";
+import { date, smallint, uuid, varchar, pgTable } from "drizzle-orm/pg-core";
 
 export const invoiceTable = pgTable("invoices", {
   id: uuid("id").primaryKey().unique().notNull(),
