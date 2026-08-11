@@ -1,14 +1,14 @@
 {
-  "name": "@frugalfinances/datamodels",
-  "module": "index.ts",
+  "name": "@frugalfinances/constants",
+  "module": "./index.ts",
   "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
-  },
-  "dependencies": {
-    "zod": "^4.4.3"
   }
 }

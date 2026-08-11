@@ -1,5 +1,5 @@
 {
-  "name": "database",
+  "name": "@frugalfinances/database",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
@@ -13,6 +13,7 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "drizzle-orm": "^1.0.0-rc.4",
-    "postgres": "^3.4.9"
+    "postgres": "^3.4.9",
+    "@frugalfinances/constants": "workspace:*"
   }
 }

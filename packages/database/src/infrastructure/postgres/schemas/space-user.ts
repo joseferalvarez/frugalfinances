@@ -1,11 +1,11 @@
 import { pgTable, uuid } from "drizzle-orm/pg-core";
-import { homesTable } from "./home";
+import { spacesTable } from "./space";
 import { usersTable } from "./user";
 
-export const homeUserTable = pgTable("home-users", {
+export const spaceUserTable = pgTable("space-users", {
   id: uuid("id").primaryKey().unique().notNull(),
-  home: uuid("home")
-    .references(() => homesTable.id)
+  space: uuid("home")
+    .references(() => spacesTable.id)
     .notNull(),
   user: uuid("user").references(() => usersTable.id),
 });

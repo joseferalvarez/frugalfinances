@@ -1,5 +1,5 @@
 {
-  "name": "@frugalfinances",
+  "name": "frugalfinances",
   "version": "0.0.0",
   "workspaces": [
     "apps/*",

@@ -1,5 +1,5 @@
 import { uuid, varchar, pgEnum, pgTable } from "drizzle-orm/pg-core";
-import { homesTable } from "./home";
+import { homesTable } from "./space";
 
 const categories = pgEnum("categories", ["telegram", "openai"]);
 

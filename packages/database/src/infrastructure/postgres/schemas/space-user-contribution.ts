@@ -1,5 +1,5 @@
 import { pgEnum, pgTable, uuid } from "drizzle-orm/pg-core";
-import { homeUserTable } from "./home-user";
+import { spaceUserTable } from "./space-user";
 
 // TODO: Create a unique enum called "invoice-types"
 const contributionTypes = pgEnum("contribution-type", [
@@ -9,8 +9,8 @@ const contributionTypes = pgEnum("contribution-type", [
   "fuel",
 ]);
 
-export const homeUserContributionTable = pgTable("home-user-contributions", {
+export const homeUserContributionTable = pgTable("space-user-contributions", {
   id: uuid("id").primaryKey().unique().notNull(),
   type: contributionTypes(),
-  home_user: uuid("home_user").references(() => homeUserTable.id),
+  space_user: uuid("home_user").references(() => spaceUserTable.id),
 });
