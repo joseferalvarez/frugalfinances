@@ -3,7 +3,7 @@ import { invoiceTable } from "./invoice";
 
 export const invoiceProductTable = pgTable("invoice-products", {
   id: uuid("id").primaryKey().unique().notNull(),
-  invoice: uuid("id").references(() => invoiceTable.id),
+  invoice: uuid("invoice").references(() => invoiceTable.id),
   product: varchar(),
   type: varchar(),
   units: smallint(),

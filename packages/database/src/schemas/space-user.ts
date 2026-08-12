@@ -4,7 +4,7 @@ import { usersTable } from "./user";
 
 export const spaceUserTable = pgTable("space-users", {
   id: uuid("id").primaryKey().unique().notNull(),
-  space: uuid("home")
+  space: uuid("space")
     .references(() => spacesTable.id)
     .notNull(),
   user: uuid("user").references(() => usersTable.id),
