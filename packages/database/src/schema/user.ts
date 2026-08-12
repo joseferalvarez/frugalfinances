@@ -1,6 +1,7 @@
 import { uuid, varchar, date, pgTable } from "drizzle-orm/pg-core";
+import { userRoleEnum } from "./enums";
 
-export const usersTable = pgTable("users", {
+export const usersTable = pgTable("user", {
   id: uuid("id").primaryKey().unique().notNull(),
   username: varchar({ length: 100 }).unique().notNull(),
   email: varchar({ length: 254 }).unique().notNull(),
@@ -8,4 +9,5 @@ export const usersTable = pgTable("users", {
   name: varchar({ length: 250 }),
   avatar: varchar({ length: 255 }),
   birthdate: date(),
+  role: userRoleEnum().notNull().default("user"),
 });

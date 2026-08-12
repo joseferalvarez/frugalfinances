@@ -1,11 +1,10 @@
 import { uuid, varchar, pgEnum, pgTable } from "drizzle-orm/pg-core";
 import { spacesTable } from "./space";
+import { tokenEnum } from "./enums";
 
-const categories = pgEnum("categories", ["telegram", "openai"]);
-
-export const tokenTable = pgTable("tokens", {
+export const tokenTable = pgTable("token", {
   id: uuid("id").primaryKey().unique().notNull(),
   space: uuid("space").references(() => spacesTable.id),
-  category: categories(),
+  category: tokenEnum(),
   token: varchar().notNull(),
 });

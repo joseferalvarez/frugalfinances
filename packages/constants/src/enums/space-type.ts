@@ -1,2 +1,2 @@
-export const SPACE_TYPE = ["home", "personal"] as const;
-export type SpaceType = (typeof SPACE_TYPE)[number];
+export const SPACE_TYPES = ["home", "personal"] as const;
+export type SpaceType = (typeof SPACE_TYPES)[number];
