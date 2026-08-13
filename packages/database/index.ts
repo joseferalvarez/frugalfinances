@@ -1,4 +1,5 @@
 export * from "./src/connection/connection";
+export * from "./src/schema/enums";
 export * from "./src/schema/user";
 export * from "./src/schema/space";
 export * from "./src/schema/space-user";

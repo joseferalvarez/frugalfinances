@@ -8,6 +8,11 @@
   },
   "dependencies": {
     "@frugalfinances/database": "workspace:*",
+    "@frugalfinances/constants": "workspace:*",
+    "@types/jsonwebtoken": "^9.0.10",
+    "argon2": "^0.45.1",
+    "env-var": "^7.5.0",
+    "jsonwebtoken": "^9.0.3",
     "uuidv7": "^1.2.1"
   },
   "devDependencies": {
@@ -15,5 +20,13 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "imports": {
+    "#domain/entities": "./src/domain/entities/index.ts",
+    "#domain/repositories": "./src/domain/repositories/index.ts",
+    "#domain/datasources": "./src/domain/datasources/index.ts",
+    "#domain/dtos": "./src/domain/dtos/index.ts",
+    "#domain/errors": "./src/domain/errors/index.ts",
+    "#config": "./src/config/index.ts"
   }
 }
