@@ -3,5 +3,5 @@ import { User } from "#domain/entities";
 
 export abstract class AuthDatasource {
   abstract login(loginUserDto: LoginUserDto): Promise<User>;
-  abstract register(registerUserDto: RegisterUserDto): Promise<User>;
+  abstract register(registerUserDto: RegisterUserDto): Promise<{ status: 0 | 1; message: string }>;
 }

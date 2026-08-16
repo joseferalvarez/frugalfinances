@@ -1,7 +1,8 @@
 import { uuid, varchar, date, pgTable } from "drizzle-orm/pg-core";
 import { userRoleEnum } from "./enums";
+import { createInsertSchema, createSelectSchema, createUpdateSchema } from "drizzle-orm/zod";
 
-export const usersTable = pgTable("user", {
+export const users = pgTable("user", {
   id: uuid("id").primaryKey().unique().notNull(),
   username: varchar({ length: 100 }).unique().notNull(),
   email: varchar({ length: 254 }).unique().notNull(),
@@ -11,3 +12,7 @@ export const usersTable = pgTable("user", {
   avatar: varchar({ length: 255 }),
   birthdate: date().notNull(),
 });
+
+export const userSelectSchema = createSelectSchema(users);
+export const userInsertSchema = createInsertSchema(users);
+export const userUpdateSchema = createUpdateSchema(users);

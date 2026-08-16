@@ -25,8 +25,10 @@
     "#domain/entities": "./src/domain/entities/index.ts",
     "#domain/repositories": "./src/domain/repositories/index.ts",
     "#domain/datasources": "./src/domain/datasources/index.ts",
+    "#domain/usecases": "./src/domain/usecases/index.ts",
     "#domain/dtos": "./src/domain/dtos/index.ts",
     "#domain/errors": "./src/domain/errors/index.ts",
+    "#infrastructure/mappers": "./src/infrastructure/mappers/index.ts",
     "#config": "./src/config/index.ts"
   }
 }

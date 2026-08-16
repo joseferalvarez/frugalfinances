@@ -7,3 +7,4 @@ export * from "./src/schema/space-user-contribution";
 export * from "./src/schema/invoice";
 export * from "./src/schema/invoice-product";
 export * from "./src/schema/token";
+export * from "./src/queries/user.queries";
